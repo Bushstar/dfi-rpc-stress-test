@@ -1,0 +1,12 @@
+[package]
+name = "rpc-stress-test"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+async-trait = "0.1.80"
+futures = "0.3.30"
+defichain-rpc = { path = "/mnt/dev/github/rust-defichain-rpc/client/" }
+defichain-rpc-json = { path = "/mnt/dev/github/rust-defichain-rpc/json/" }
+rayon = "1.10.0"
+tokio = { version = "1.0.0", features = ["rt", "rt-multi-thread", "macros"] }
