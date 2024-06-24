@@ -1,11 +1,12 @@
 use crate::rpc_results::RPCResult;
-use crate::test_runner::STRESS_LOOPS;
 use defichain_rpc::Error;
 use rayon::prelude::*;
 use std::future::Future;
 use std::sync::Arc;
 use std::sync::atomic::{AtomicBool, Ordering};
 use tokio::runtime;
+
+const STRESS_LOOPS: u32 = 20;
 
 pub async fn generic_test<F, Fut>(
     func: F,

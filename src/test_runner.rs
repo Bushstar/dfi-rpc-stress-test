@@ -1,8 +1,6 @@
 use crate::account_tests::*;
 use crate::systems::{reconsider_block, rollback};
 
-pub const STRESS_LOOPS: u32 = 20;
-
 pub async fn test_runner() {
     // Rollback chain
     let block_hash = rollback(10).await;

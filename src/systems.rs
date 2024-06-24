@@ -1,4 +1,4 @@
-use defichain_rpc::{bitcoin, Auth, Client, RpcApi, Error};
+use defichain_rpc::{bitcoin, Auth, Client, RpcApi};
 use std::process;
 
 pub async fn connect() -> Client {
